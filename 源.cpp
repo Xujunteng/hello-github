@@ -1,57 +1,53 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-struct teacher {
-    string tName;
-    struct student {
-        string sName;
-        int score;
-    } sArray[5];
-}tArray[3];;
-
-void allocateSpace(struct teacher tArray[], int len) {
-
-string nameseed = "ABCDE";
-for (int i = 0; i < len; i++){
-	tArray[i].tName = "Teacher"; 
-	tArray[i].tName += nameseed[i];
-	
-
-		for (int j = 0; j < 5; j++){
-			tArray[i].sArray[j].sName = "Student";
-			tArray[i].sArray[j].sName += nameseed[j];
-			int random = rand() % 61 + 40;
-			tArray[i].sArray[j].score = random;
-
-		}
-	
-	}
-}
-
-void printInfo(struct teacher tArray[], int len) {
-
-	for (int i = 0; i < len; i++) {
-
-		cout << "老师姓名: " << tArray[i].tName << endl;
-
-		for (int j = 0; j < 5; j++) {
-
-			cout << "\t学生姓名：" << tArray[i].sArray[j].sName <<
-				"考试分数：" << tArray[i].sArray[j].score << endl;
-
-		}
-	}
-
-}
 int main() {
+    int T = 0;
+    cin >> T;
+    vector<char> choice(T);
+    vector<int> h(T);
+    vector<int> w(T);
 
-    srand((unsigned int)time(NULL));
-	
-	
-	int	len = sizeof(tArray) / sizeof(tArray[0]);
-	allocateSpace(tArray, len);
-	printInfo(tArray, len);
-
-	return 0;
+    for (int i = 0; i < T; ++i) {
+        cin >> choice[i] >> h[i] >> w[i];
+    }
+    for(int i=0;i<T;i++){
+    if (choice[i] == 'a') {
+            int k = 2 * h[i] + 1;
+            int hh = h[i];
+            for (; hh > 0; hh--) {
+                for (int n = hh - 1; n > 0; n--) {
+                    cout << " ";
+                }
+                for (int m = 0; m < k - 2 * hh; m++) {
+                    cout << "*";
+                }
+                cout << endl;
+            }
+        }
+        else if (choice[i] == 'b') {
+            int hh = h[i], ww = w[i];
+            for (; hh > 0; hh--) {
+                for (int j = 0; j < ww; j++) {
+                    cout << "*";
+                }
+                cout << endl;
+            }
+        }
+        else if (choice[i] == 'c') {
+            int hh = h[i], ww = w[i];
+            for (; hh > 0; hh--) {
+                for (int n = hh - 1; n > 0; n--) {
+                    cout << " ";
+                }
+                for (int j = 0; j < ww; j++) {
+                    cout << "*";
+                }
+                cout << endl;
+            }
+        }
+    }
+    return 0;
 }
