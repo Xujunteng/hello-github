@@ -33,12 +33,12 @@ void printInfo(struct teacher tArray[], int len) {
 
 	for (int i = 0; i < len; i++) {
 
-		cout << "ÀÏÊ¦ÐÕÃû: " << tArray[i].tName << endl;
+		cout << "è€å¸ˆå§“å: " << tArray[i].tName << endl;
 
 		for (int j = 0; j < 5; j++) {
 
-			cout << "\tÑ§ÉúÐÕÃû£º" << tArray[i].sArray[j].sName <<
-				"¿¼ÊÔ·ÖÊý£º" << tArray[i].sArray[j].score << endl;
+			cout << "\tå­¦ç”Ÿå§“åï¼š" << tArray[i].sArray[j].sName <<
+				"è€ƒè¯•åˆ†æ•°ï¼š" << tArray[i].sArray[j].score << endl;
 
 		}
 	}
