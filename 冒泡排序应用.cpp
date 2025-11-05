@@ -15,7 +15,7 @@ void bubblesort(int* arr, int len) {
 }
 int main() {
     int a = 0, b = 0;
-    cout << "ÇëÊäÈëÁ½×éÕûÊıµÄ¸öÊı" << endl;
+    cout << "è¯·è¾“å…¥ä¸¤ç»„æ•´æ•°çš„ä¸ªæ•°" << endl;
     cin >> a >> b;
     int* arrc = new int[a + b];
     int* arr1 = new int[a];
@@ -32,7 +32,7 @@ int main() {
     bubblesort(arrc, a + b);
    
         for (int i = 0; i < a + b; i++) {
-            // ĞŞÕı£º±ÜÃâÔ½½ç·ÃÎÊ arrc[i + 1]£¬²¢ĞŞÕı¸³ÖµÎª±È½Ï
+            // ä¿®æ­£ï¼šé¿å…è¶Šç•Œè®¿é—® arrc[i + 1]ï¼Œå¹¶ä¿®æ­£èµ‹å€¼ä¸ºæ¯”è¾ƒ
             if (i < a + b - 1 && arrc[i] == arrc[i + 1])
                 continue;
             else
@@ -43,4 +43,5 @@ int main() {
     
 
     return 0;
+
 }
