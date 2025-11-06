@@ -39,9 +39,12 @@ int main() {
                 cout << arrc[i];
         }
     
-    
+    delete[] arrc;
+    delete[] arr1;
+    delete[] arr2;
     
 
     return 0;
 
 }
+
