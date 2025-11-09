@@ -1,2 +1,3 @@
 # hello-github
-self-use
+self-use 
+for c++ learning
